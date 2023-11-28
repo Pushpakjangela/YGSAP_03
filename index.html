@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GSAP_02</title>
+    <link
+      rel="shortcut icon"
+      href="data:image/jpeg;base64,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"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="page1">
+      <nav id="navbar">
+        <div id="navbarimg">
+          <img
+            src="https://i.pinimg.com/originals/10/13/47/1013478ec52da03650a6d4889098223c.png"
+            alt=""
+          />
+        </div>
+        <div id="navbar2">
+          <h3>SERVICES</h3>
+          <h3>ABOUT US</h3>
+          <h3>CARES</h3>
+        </div>
+        <div id="navbar3">
+          <h3>SIGN UP</h3>
+          <i class="ri-arrow-right-circle-line"></i>
+        </div>
+      </nav>
+      <div id="content">
+        <div id="text">
+          <div class="div">
+            <h1 id="texth11">UNLIMUTED</h1>
+            <h1 id="texth12">PRETENTIOUS</h1>
+            <div id="imgh1">
+              <span
+                ><img 
+                class="imgh1img"
+                  src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bW9kZWx8ZW58MHx8MHx8fDA%3D"
+                  alt=""
+              /></span>
+              <span
+                ><img
+                class="imgh1img"
+
+                  src="https://images.unsplash.com/photo-1536766820879-059fec98ec0a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8ODd8fG1vZGVsfGVufDB8fDB8fHww"
+                  alt=""
+              /></span>
+              <span
+                ><img
+                class="imgh1img"
+
+                  src="https://images.unsplash.com/photo-1622519407650-3df9883f76a5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDExfHx8ZW58MHx8fHx8"
+                  alt=""
+              /></span>
+              <h1 id="imgh13">IDEAS</h1>
+            </div>
+          </div>
+          <div id="text2">
+            <div id="text21">
+                <h3>OUR SOLUTION</h3>
+            </div>
+            <div id="text22">
+                <h3>WE PROVIDE THE FULL <br> FUNNLE APPROCH</h3>
+            </div>
+          </div>
+          <div>
+
+          </div>
+        </div>
+        <div id="textimg">
+            <div id="textimg1">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+            </div>
+            <div id="textimg2">
+                <h4>YOUR</h4>
+                <h4>BUISSNESS</h4>
+                <h4>BOOST</h4>
+            </div>
+            <div id="textimg3">
+                <input type="text" placeholder="SEARCH FOR ANYTHING..">
+          
+                <button type="submit"><i class="ri-arrow-right-circle-fill"></i></button>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div id="page2">
+      <div class="page2class" id="page2part1">
+        <div id="pp1">
+          <div id="pp11">
+            <i class="ri-arrow-right-s-fill"></i>
+          </div>
+          <div id="pp12">
+            <h3>Let's See</h3>
+            <h4>How We Did it</h4>
+          </div>
+
+        </div>
+        <div id="pp2">
+          <button>WEB APPLICATION</button>
+          <button>EMAIL MARKETING</button>
+          <button>SEO 2.0</button>
+        </div>
+      </div>
+      <div class="page2class" id="page2part2">
+        <div id="pp21">
+          <h3>UNIQUE <br> BUISNESS SOLUTION</h3>
+        </div>
+        <div id="pp22">
+          <i class="ri-dingding-fill"></i>
+        </div>
+      </div>
+      <div class="page2class" id="page2part3">
+        <div id="pp31">
+          <i class="ri-arrow-right-up-line"></i>
+        </div>
+        <div id="pp32">
+          <h2>OUR CASE <br> STUDIES</h2>
+        </div>
+      </div>
+      <div class="page2class" id="page2part4">
+        <div id="pp41">
+          <h3>SUCCESSFUL <br> PROJECT</h3>
+        </div>
+        <div id="pp42">
+          <p>+</p>
+          <h1>700 </h1>
+        </div>
+      </div>
+    </div>
+
+    <!-- locomotive-scroll -->
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+
+    <!-- GSAP libarary -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+      integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- gsap ScrollTrigger  -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"
+      integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
